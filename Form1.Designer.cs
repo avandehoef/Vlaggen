@@ -46,6 +46,9 @@
             this.textAntwoordCorrect = new System.Windows.Forms.TextBox();
             this.textAntwoordInCorrect = new System.Windows.Forms.TextBox();
             this.pictureVlag = new System.Windows.Forms.PictureBox();
+            this.textHoofdstad = new System.Windows.Forms.TextBox();
+            this.textOppervlakte = new System.Windows.Forms.TextBox();
+            this.textInwoners = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureVlag)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +94,7 @@
             this.btnAntwoordB.TabIndex = 5;
             this.btnAntwoordB.Text = "B";
             this.btnAntwoordB.UseVisualStyleBackColor = true;
-            this.btnAntwoordB.Click += new System.EventHandler(this.button1_Click);
+            this.btnAntwoordB.Click += new System.EventHandler(this.btnAntwoordB_Click);
             // 
             // btnAntwoordA
             // 
@@ -102,7 +105,7 @@
             this.btnAntwoordA.TabIndex = 4;
             this.btnAntwoordA.Text = "A";
             this.btnAntwoordA.UseVisualStyleBackColor = true;
-            this.btnAntwoordA.Click += new System.EventHandler(this.button2_Click);
+            this.btnAntwoordA.Click += new System.EventHandler(this.btnAntwoordA_Click);
             // 
             // btnAntwoordD
             // 
@@ -153,11 +156,11 @@
             // textScoreOutput
             // 
             this.textScoreOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textScoreOutput.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textScoreOutput.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.textScoreOutput.Location = new System.Drawing.Point(526, 136);
             this.textScoreOutput.Name = "textScoreOutput";
             this.textScoreOutput.ReadOnly = true;
-            this.textScoreOutput.Size = new System.Drawing.Size(181, 25);
+            this.textScoreOutput.Size = new System.Drawing.Size(181, 30);
             this.textScoreOutput.TabIndex = 10;
             this.textScoreOutput.Text = "0";
             this.textScoreOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -209,27 +212,25 @@
             // textAntwoordCorrect
             // 
             this.textAntwoordCorrect.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textAntwoordCorrect.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textAntwoordCorrect.ForeColor = System.Drawing.Color.Green;
+            this.textAntwoordCorrect.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.textAntwoordCorrect.ForeColor = System.Drawing.Color.Lime;
             this.textAntwoordCorrect.Location = new System.Drawing.Point(778, 277);
             this.textAntwoordCorrect.Name = "textAntwoordCorrect";
             this.textAntwoordCorrect.ReadOnly = true;
-            this.textAntwoordCorrect.Size = new System.Drawing.Size(181, 25);
+            this.textAntwoordCorrect.Size = new System.Drawing.Size(181, 27);
             this.textAntwoordCorrect.TabIndex = 15;
-            this.textAntwoordCorrect.Text = "Goed!";
             this.textAntwoordCorrect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textAntwoordInCorrect
             // 
             this.textAntwoordInCorrect.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textAntwoordInCorrect.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textAntwoordInCorrect.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.textAntwoordInCorrect.ForeColor = System.Drawing.Color.Red;
             this.textAntwoordInCorrect.Location = new System.Drawing.Point(778, 338);
             this.textAntwoordInCorrect.Name = "textAntwoordInCorrect";
             this.textAntwoordInCorrect.ReadOnly = true;
-            this.textAntwoordInCorrect.Size = new System.Drawing.Size(181, 25);
+            this.textAntwoordInCorrect.Size = new System.Drawing.Size(181, 27);
             this.textAntwoordInCorrect.TabIndex = 16;
-            this.textAntwoordInCorrect.Text = "Niet goed";
             this.textAntwoordInCorrect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureVlag
@@ -243,11 +244,50 @@
             this.pictureVlag.TabStop = false;
             this.pictureVlag.Click += new System.EventHandler(this.pictureVlag_Click);
             // 
+            // textHoofdstad
+            // 
+            this.textHoofdstad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textHoofdstad.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textHoofdstad.Location = new System.Drawing.Point(59, 505);
+            this.textHoofdstad.Multiline = true;
+            this.textHoofdstad.Name = "textHoofdstad";
+            this.textHoofdstad.ReadOnly = true;
+            this.textHoofdstad.Size = new System.Drawing.Size(400, 26);
+            this.textHoofdstad.TabIndex = 17;
+            this.textHoofdstad.TabStop = false;
+            // 
+            // textOppervlakte
+            // 
+            this.textOppervlakte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textOppervlakte.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textOppervlakte.Location = new System.Drawing.Point(59, 545);
+            this.textOppervlakte.Multiline = true;
+            this.textOppervlakte.Name = "textOppervlakte";
+            this.textOppervlakte.ReadOnly = true;
+            this.textOppervlakte.Size = new System.Drawing.Size(400, 26);
+            this.textOppervlakte.TabIndex = 18;
+            this.textOppervlakte.TabStop = false;
+            // 
+            // textInwoners
+            // 
+            this.textInwoners.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textInwoners.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textInwoners.Location = new System.Drawing.Point(59, 588);
+            this.textInwoners.Multiline = true;
+            this.textInwoners.Name = "textInwoners";
+            this.textInwoners.ReadOnly = true;
+            this.textInwoners.Size = new System.Drawing.Size(400, 26);
+            this.textInwoners.TabIndex = 19;
+            this.textInwoners.TabStop = false;
+            // 
             // vlag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 721);
+            this.Controls.Add(this.textInwoners);
+            this.Controls.Add(this.textOppervlakte);
+            this.Controls.Add(this.textHoofdstad);
             this.Controls.Add(this.textAntwoordInCorrect);
             this.Controls.Add(this.textAntwoordCorrect);
             this.Controls.Add(this.textBijAntwoordD);
@@ -296,6 +336,9 @@
         private System.Windows.Forms.TextBox textBijAntwoordD;
         private System.Windows.Forms.TextBox textAntwoordCorrect;
         private System.Windows.Forms.TextBox textAntwoordInCorrect;
+        private System.Windows.Forms.TextBox textHoofdstad;
+        private System.Windows.Forms.TextBox textOppervlakte;
+        private System.Windows.Forms.TextBox textInwoners;
     }
 }
 
