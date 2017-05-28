@@ -25,14 +25,20 @@ namespace Vlaggen
 
         Image[] imagesVlaggenArray = new Image[197];
         int ScoreOutput = 0;
+        int HighScoreOutput = 0;
         int randomVlag;
-        int randomPlaatsingText;
+        int randomPlaatsingText;        
                         
         Random randomNummer1 = new Random();
         Random randomNummer2 = new Random();
         Random randomNummer3 = new Random();
         Random randomNummer4 = new Random();
         Random randomNummer5 = new Random();
+        Random randomNummer6 = new Random();
+        Random randomNummer7 = new Random();
+        Random randomNummer8 = new Random();
+        Random randomNummer9 = new Random();
+        Random randomNummer10 = new Random();
 
         private void pictureVlag_Click(object sender, EventArgs e)
         {
@@ -46,7 +52,8 @@ namespace Vlaggen
             textInwoners.Text = "";
             textAntwoordCorrect.Text = "";
             textAntwoordInCorrect.Text = "";
-            btnVolgendeVlag.Enabled = true;
+            textToelichtingJuisteAntwoord.Text = "";
+            btnVolgendeVlag.Enabled = false;
             btnAntwoordA.Enabled = true;
             btnAntwoordB.Enabled = true;
             btnAntwoordC.Enabled = true;
@@ -63,11 +70,11 @@ namespace Vlaggen
 
             if (randomPlaatsingText == 1)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -75,11 +82,11 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -87,10 +94,10 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1,44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1,44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -105,11 +112,11 @@ namespace Vlaggen
             }
             else if (randomPlaatsingText == 2)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -117,11 +124,11 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -129,10 +136,10 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -147,11 +154,11 @@ namespace Vlaggen
             }
             else if (randomPlaatsingText == 3)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -159,11 +166,11 @@ namespace Vlaggen
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -171,10 +178,10 @@ namespace Vlaggen
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -189,11 +196,11 @@ namespace Vlaggen
             }
             else if (randomPlaatsingText == 4)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -201,11 +208,11 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -213,10 +220,10 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -233,6 +240,7 @@ namespace Vlaggen
         
         private void btnVolgendeVlag_Click(object sender, EventArgs e)
         {
+            textToelichtingJuisteAntwoord.Text = "";
             btnVolgendeVlag.Enabled = false;
             btnAntwoordA.Enabled = true;
             btnAntwoordB.Enabled = true;
@@ -249,11 +257,11 @@ namespace Vlaggen
 
             if (randomPlaatsingText == 1)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -261,11 +269,11 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -273,10 +281,10 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -294,11 +302,11 @@ namespace Vlaggen
             }
             else if (randomPlaatsingText == 2)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -306,11 +314,11 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -318,10 +326,10 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -339,11 +347,11 @@ namespace Vlaggen
             }
             else if (randomPlaatsingText == 3)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -351,11 +359,11 @@ namespace Vlaggen
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -363,10 +371,10 @@ namespace Vlaggen
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordD.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -384,11 +392,11 @@ namespace Vlaggen
             }
             else if (randomPlaatsingText == 4)
             {
-                if (randomVlag < 10)
+                if (randomVlag < 45)
                 {
-                    int randomVlagTwee = randomVlag + 7;
-                    int randomVlagDrie = randomVlag + 23;
-                    int randomVlagVier = randomNummer3.Next(34, 197);
+                    int randomVlagTwee = randomNummer6.Next(45, 85);
+                    int randomVlagDrie = randomNummer7.Next(85, 135);
+                    int randomVlagVier = randomNummer8.Next(135, 197);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -396,11 +404,11 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag > 190)
+                else if (randomVlag > 152)
                 {
-                    int randomVlagTwee = randomVlag - 14;
-                    int randomVlagDrie = randomVlag - 21;
-                    int randomVlagVier = randomNummer4.Next(1, 168);
+                    int randomVlagTwee = randomNummer6.Next(1, 63);
+                    int randomVlagDrie = randomNummer7.Next(63, 120);
+                    int randomVlagVier = randomNummer8.Next(120, 152);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
                     var alternatiefAntwoordDrie = landen.ElementAt(randomVlagVier);
@@ -408,10 +416,10 @@ namespace Vlaggen
                     textBijAntwoordC.Text = Convert.ToString(alternatiefAntwoordTwee);
                     textBijAntwoordA.Text = Convert.ToString(alternatiefAntwoordDrie);
                 }
-                else if (randomVlag >= 10 && randomVlag <= 190)
+                else if (randomVlag >= 45 && randomVlag <= 152)
                 {
-                    int randomVlagTwee = randomVlag - 8;
-                    int randomVlagDrie = randomVlag + 4;
+                    int randomVlagTwee = randomVlag - randomNummer9.Next(1, 44);
+                    int randomVlagDrie = randomVlag + randomNummer10.Next(1, 44);
                     int randomVlagVier = randomNummer4.Next(10, 190);
                     var alternatiefAntwoordEen = landen.ElementAt(randomVlagTwee);
                     var alternatiefAntwoordTwee = landen.ElementAt(randomVlagDrie);
@@ -431,6 +439,8 @@ namespace Vlaggen
 
         private void btnAlleVlaggen_Click(object sender, EventArgs e)
         {
+            ScoreOutput = 0;
+            textScoreOutput.Text = Convert.ToString(ScoreOutput);
             alleVlaggen alleVlaggen = new alleVlaggen();
             alleVlaggen.Show();
         }        
@@ -469,7 +479,18 @@ namespace Vlaggen
             else
             {
                 textAntwoordInCorrect.Text = "Dat is niet goed";
-                ScoreOutput= 0;
+                HighScoreOutput = Convert.ToInt32(textHighScoreOutput.Text);
+                if (HighScoreOutput < ScoreOutput)
+                {
+                    textHighScoreOutput.Text = Convert.ToString(ScoreOutput);
+                }
+
+                List<string> landen = File.ReadAllLines(@"InfoLanden.txt").ToList();
+                var juisteAntwoord = landen.ElementAt(randomVlag);
+
+                textToelichtingJuisteAntwoord.Text = "Dit is de vlag van " + juisteAntwoord;
+
+                ScoreOutput = 0;
                 textScoreOutput.Text = Convert.ToString(ScoreOutput);
 
             }
@@ -509,6 +530,17 @@ namespace Vlaggen
             else
             {
                 textAntwoordInCorrect.Text = "Dat is niet goed";
+                HighScoreOutput = Convert.ToInt32(textHighScoreOutput.Text);
+                if (HighScoreOutput < ScoreOutput)
+                {
+                    textHighScoreOutput.Text = Convert.ToString(ScoreOutput);
+                }
+
+                List<string> landen = File.ReadAllLines(@"InfoLanden.txt").ToList();
+                var juisteAntwoord = landen.ElementAt(randomVlag);
+
+                textToelichtingJuisteAntwoord.Text = "Dit is de vlag van " + juisteAntwoord;
+
                 ScoreOutput = 0;
                 textScoreOutput.Text = Convert.ToString(ScoreOutput);
             }
@@ -548,6 +580,17 @@ namespace Vlaggen
             else
             {
                 textAntwoordInCorrect.Text = "Dat is niet goed";
+                HighScoreOutput = Convert.ToInt32(textHighScoreOutput.Text);
+                if (HighScoreOutput < ScoreOutput)
+                {
+                    textHighScoreOutput.Text = Convert.ToString(ScoreOutput);
+                }
+
+                List<string> landen = File.ReadAllLines(@"InfoLanden.txt").ToList();
+                var juisteAntwoord = landen.ElementAt(randomVlag);
+
+                textToelichtingJuisteAntwoord.Text = "Dit is de vlag van " + juisteAntwoord;
+
                 ScoreOutput = 0;
                 textScoreOutput.Text = Convert.ToString(ScoreOutput);
             }
@@ -587,9 +630,25 @@ namespace Vlaggen
             else
             {
                 textAntwoordInCorrect.Text = "Dat is niet goed";
+                HighScoreOutput = Convert.ToInt32(textHighScoreOutput.Text);
+                if (HighScoreOutput < ScoreOutput)
+                {
+                    textHighScoreOutput.Text = Convert.ToString(ScoreOutput);
+                }
+
+                List<string> landen = File.ReadAllLines(@"InfoLanden.txt").ToList();
+                var juisteAntwoord = landen.ElementAt(randomVlag);
+
+                textToelichtingJuisteAntwoord.Text = "Dit is de vlag van " + juisteAntwoord;
+
                 ScoreOutput = 0;
                 textScoreOutput.Text = Convert.ToString(ScoreOutput);
             }
+        }
+
+        private void textOpeningsTekst_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,12 +11,11 @@ using System.IO;
 
 namespace Vlaggen
 {
-    public partial class alleVlaggen : Form
+    public partial class alleVlaggen4 : Form
     {
-                
-        public alleVlaggen()
+        public alleVlaggen4()
         {
-            InitializeComponent();               
+            InitializeComponent();
         }
 
         int nr;
@@ -38,11 +37,11 @@ namespace Vlaggen
         int positieVerticaalVierVlag = 490;
         int positieVerticaalVijfVlag = 650;
 
-        private void alleVlaggen_Load(object sender, EventArgs e)
+        private void alleVlaggen4_Load(object sender, EventArgs e)
         {
-            for (nr = 1; nr <=100; nr++)
+            for (nr = 121; nr <= 197; nr++)
             {
-                if (nr < 9)
+                if (nr < 129)
                 {
                     PictureBox vlag = new PictureBox();
                     vlag.Location = new Point(positieHorizontaal, positieVerticaalVlag);
@@ -52,7 +51,7 @@ namespace Vlaggen
                     vlag.Visible = true;
                     vlag.Image = (Image)Properties.Resources.ResourceManager.GetObject("Vlag" + nr);
                     Controls.Add(vlag);
-                    
+
                     TextBox land = new TextBox();
                     land.Location = new Point(positieHorizontaal, positieVerticaalText);
                     land.Width = 160;
@@ -71,7 +70,7 @@ namespace Vlaggen
 
                     positieHorizontaal = positieHorizontaal + 170;
                 }
-                else if(nr >= 9 && nr < 17)
+                else if (nr >= 129 && nr < 137)
                 {
                     PictureBox vlag = new PictureBox();
                     vlag.Location = new Point(positieHorizontaalTwee, positieVerticaalTweeVlag);
@@ -100,7 +99,7 @@ namespace Vlaggen
 
                     positieHorizontaalTwee = positieHorizontaalTwee + 170;
                 }
-                else if (nr >= 17 && nr < 25)
+                else if (nr >= 137 && nr < 145)
                 {
                     PictureBox vlag = new PictureBox();
                     vlag.Location = new Point(positieHorizontaalDrie, positieVerticaalDrieVlag);
@@ -129,7 +128,7 @@ namespace Vlaggen
 
                     positieHorizontaalDrie = positieHorizontaalDrie + 170;
                 }
-                else if (nr >= 25 && nr < 33)
+                else if (nr >= 145 && nr < 153)
                 {
                     PictureBox vlag = new PictureBox();
                     vlag.Location = new Point(positieHorizontaalVier, positieVerticaalVierVlag);
@@ -158,7 +157,7 @@ namespace Vlaggen
 
                     positieHorizontaalVier = positieHorizontaalVier + 170;
                 }
-                else if (nr >= 33 && nr < 41)
+                else if (nr >= 153 && nr < 161)
                 {
                     PictureBox vlag = new PictureBox();
                     vlag.Location = new Point(positieHorizontaalVijf, positieVerticaalVijfVlag);
@@ -188,9 +187,6 @@ namespace Vlaggen
                     positieHorizontaalVijf = positieHorizontaalVijf + 170;
                 }
             }
-            
-
-
         }
 
         private void btnSluit_Click(object sender, EventArgs e)
@@ -198,10 +194,17 @@ namespace Vlaggen
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVolgendScherm_Click(object sender, EventArgs e)
         {
-            alleVlaggen2 alleVlaggen2 = new alleVlaggen2();
-            alleVlaggen2.Show();
+            alleVlaggen5 alleVlaggen5 = new alleVlaggen5();
+            alleVlaggen5.Show();
+            Close();            
+        }
+
+        private void btnVorigScherm_Click(object sender, EventArgs e)
+        {
+            alleVlaggen3 alleVlaggen3 = new alleVlaggen3();
+            alleVlaggen3.Show();
             Close();
         }
     }
